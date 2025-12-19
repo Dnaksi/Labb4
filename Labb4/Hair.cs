@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
+    // Hair struct and overrride for ToString
     public struct Hair
     {
         public string HairColor { get; set; }
@@ -17,3 +18,4 @@ namespace test
 
     }
 }
+
