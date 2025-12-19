@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace test
 {
+    //Enum of genders 
     public enum Gender
     {
         Woman = 1,
@@ -14,3 +15,4 @@ namespace test
         Other = 4,
     }
 }
+
