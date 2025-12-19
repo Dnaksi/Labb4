@@ -29,15 +29,13 @@ namespace test
             Hair = new Hair();
             
         }
-
+        // here we made code to write out the details of a person
         public override string ToString()
         {
             return $"Name: {Name}\n{Hair}\nGender: {Gender}\nBirthDate: {BirthDate}\nEyecolor: {Eyecolor}";
         }
-
-        public void ListPersons()
-            
-
+        //here we made code to write out all persons and if no was found write no persons existed in the list
+        public void ListPersons()  
         {
             string Line = ("-------------------");
 
@@ -53,7 +51,7 @@ namespace test
             }
         }
 
-
+        // here is the code to add persons to the list
         public void AddPerson()
         {
             string Line = ("-------------------");
@@ -63,7 +61,7 @@ namespace test
             {
                 Hair = new Hair()
             };
-
+            // While loop to get name and repeat if invalid input was made
             while (true)
             {
                 Console.WriteLine("Name: ");
@@ -78,7 +76,7 @@ namespace test
                 Console.WriteLine($"{failStr} or only use numbers.");
                 Console.WriteLine(Line + "\n");
             }
-           
+           // While loop to get Haircolor and repeat if invalid input was made
             while (true) 
             {
                 Console.WriteLine("Hair color:");
@@ -96,6 +94,7 @@ namespace test
                 Console.WriteLine($"{failStr} or use any numbers.");
                 Console.WriteLine(Line + "\n");
             }
+            // While loop to get hairlength and repeat if invalid input was made
            while (true)
             {
                 Console.WriteLine("Hair length(CM) :");
@@ -114,6 +113,7 @@ namespace test
                 Console.WriteLine($"{failInt} hair length:");
                 Console.WriteLine(Line + "\n");
             }
+            // While loop to get birth date and repeat if invalid input was made
             while (true)
             { 
                 Console.WriteLine("Birth Date (YYYY-MM-DD):");
@@ -126,6 +126,7 @@ namespace test
                 Console.WriteLine($"{failInt} birth date:");
                 Console.WriteLine(Line + "\n");
             }
+            // While loop to get eyecolor and repeat if invalid input was made
             while (true)
             {
                 Console.WriteLine("Eye Color:");
@@ -143,6 +144,7 @@ namespace test
 
             Console.WriteLine($"Gender, choose a number:\n1. Woman\n2. Man\n3. NonBinary\n4. Other");
                 int genderInput;
+            // While loop to get Gender and repeat if invalid input was made
             while (!int.TryParse(Console.ReadLine(), out genderInput) || genderInput < 1 || genderInput > 4)
             {
                 Console.WriteLine("\n" + Line);
@@ -155,7 +157,7 @@ namespace test
 
          
 
-
+            //here we add the persons details to the list and writ it was a success
             people.Add(person);
             Console.WriteLine("\n" + Line);
             Console.WriteLine("Person added.");
@@ -166,3 +168,4 @@ namespace test
 
     }
 }
+
